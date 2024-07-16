@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 var express = require('express');
 
 var router = express.Router();
 
 module.exports = router;
-=======
 var express = require('express');
 var router = express.Router();
 
@@ -14,4 +12,3 @@ router.get('/', function(req, res, next) {
 });
 
 module.exports = router;
->>>>>>> cb083d8 (backend init setup)

@@ -6,7 +6,6 @@ var logger = require('morgan');
 const cors = require('cors');
 require('dotenv').config();
 
-<<<<<<< HEAD
 global.conn = require('./connection/connect');
 
 conn.connect(function(err) {
@@ -21,7 +20,6 @@ var loansRouter = require('./routes/loans');
 
 var app = express();
 app.use(cors());
-=======
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
@@ -30,7 +28,6 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
->>>>>>> cb083d8 (backend init setup)
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -39,7 +36,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-<<<<<<< HEAD
 app.use('/books', booksRouter);
 app.use('/readers', readersRouter);
 app.use('/loans', loansRouter);
@@ -47,7 +43,6 @@ app.use('/loans', loansRouter);
 module.exports = app;
 
 //Test
-=======
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
@@ -67,4 +62,3 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
->>>>>>> cb083d8 (backend init setup)
